@@ -1,0 +1,95 @@
+
+.contenedor-juego {
+    display: flex;            
+    flex-direction: column;   
+    align-items: center;      
+    justify-content: center;  
+    margin: 20px auto;        
+}
+
+
+#startButton {
+    padding: 10px 20px;      
+    background-color: #fff;  
+    color: #090909;             
+    border: none;            
+    cursor: pointer;          
+    font-size: 20px;          
+    margin-bottom: 50px;  
+   border-radius: 5px;
+      
+}
+canvas {
+    background: black;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #fff; 
+}
+
+
+#pongCanvas {
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+  
+}
+
+body, html {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-color: #800080 
+}
+
+
+  
+  footer {
+    margin-top: 20px; 
+    color: #fff; 
+    font-size: 24px; 
+}
+
+@media (min-width: 1024px) {
+    #pongCanvas {
+        width: 800px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 600px) {
+    #pongCanvas {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 599px) {
+        
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    #pongCanvas {
+        width: 95vw;
+        height: 60vh;
+    }
+
+    #controlesMovil {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #controlesMovil button {
+        padding: 8px 15px;
+        margin: 5px;
+        font-size: 18px;
+    }
+}
+
+
+
