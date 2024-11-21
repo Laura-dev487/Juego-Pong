@@ -105,6 +105,31 @@ const pelota = {
 let puntajeJugador = 0;
 let puntajeComputadora = 0;
 
+
+// Funciones de eventos táctiles
+ canvas.addEventListener('touchstart', touchStartHandler); 
+ canvas.addEventListener('touchmove', touchMoveHandler); 
+
+
+ function touchStartHandler(e) {
+     const touch = e.touches[0]; 
+     if (touch.clientX < canvas.width / 2) { 
+         jugador.y = touch.clientY - jugador.height / 2;
+         } else { 
+          y = touch.clientY - computadora.height / 2; 
+        } 
+   }
+
+   function touchMoveHandler(e) {
+     const touch = e.touches[0];
+      if (touch.clientX < canvas.width / 2) {
+         jugador.y = touch.clientY - jugador.height / 2; 
+        } else { 
+          computadora.y = touch.clientY - computadora.height / 2;
+         }
+          e.preventDefault(); 
+    }
+
 // Clase para las Partículas
 class Particula {
     constructor(x, y, velocidadX, velocidadY, tamaño, color, alpha) {
